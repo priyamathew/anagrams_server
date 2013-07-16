@@ -1,0 +1,14 @@
+<form method="GET" action="/findanagrams">
+  <label>Enter word</label>
+  <input type="text" id="user_word" name="word" placeholder="enter word" required>
+  <input type="submit" id="button" value="Find Anagrams!" />
+</form>
+
+
+<% if @error %>
+  <p><%= @error %></p>
+<% end %>
+
+<% if @anagrams %>
+  <%= erb :_anagram %>
+<% end %>
